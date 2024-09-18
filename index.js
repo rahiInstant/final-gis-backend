@@ -25,7 +25,7 @@ app.get("/", async (req, res) => {
   res.status(200).send("home");
 });
 
-// app.post("/data", async (req, res) => {
+// app.post("/data", async (req, res) => 
 //   const table = req.body.table;
 //   //   console.log(table);
 //   const result = await client.query(
