@@ -124,7 +124,7 @@ const uri = `mongodb+srv://safepark:DdtY5CfCtlHsF6KX@parking.z2eyy.mongodb.net/?
 
 // const uri = "mongodb://localhost:27017";
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
+const Client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,
@@ -142,7 +142,7 @@ async function run() {
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
     // DB Name
-    const parkingDB = client.db("safePark");
+    const parkingDB = Client.db("safePark");
     const parkingInfo = parkingDB.collection("parkingInfo");
     const CCC_ROADS = parkingDB.collection("CCC_ROADS");
 
